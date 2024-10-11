@@ -55,6 +55,7 @@ CMakeLists.txt.user
 #
 /.settings/
 /.externalToolBuilders/*
+/.vs
 # exclude in all levels
 nbproject/
 .sync.ffs_db
@@ -63,6 +64,7 @@ nbproject/
 .idea
 cmake-build-*/*
 coverage-report/
+/out
 
 #
 # Eclipse
