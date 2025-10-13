@@ -61,11 +61,7 @@ struct DynTreeImpl : public ParentTree
     typedef GameObjectModel Model;
     typedef ParentTree base;
 
-    DynTreeImpl() :
-        rebalance_timer(CHECK_TREE_PERIOD),
-        unbalanced_times(0)
-    {
-    }
+    DynTreeImpl() : rebalance_timer(CHECK_TREE_PERIOD), unbalanced_times(0) {}
 
     void insert(const Model& mdl)
     {
@@ -87,10 +83,8 @@ struct DynTreeImpl : public ParentTree
 
     void update(uint32 difftime)
     {
-        if (!size())
-        {
+        if (empty())
             return;
-        }
 
         rebalance_timer.Update(difftime);
         if (rebalance_timer.Passed())
@@ -132,11 +126,6 @@ bool DynamicMapTree::contains(const GameObjectModel& mdl) const
 void DynamicMapTree::balance()
 {
     impl->balance();
-}
-
-int DynamicMapTree::size() const
-{
-    return impl->size();
 }
 
 void DynamicMapTree::update(uint32 t_diff)
