@@ -94,8 +94,6 @@ class Transport;
 class StaticTransport;
 class MotionTransport;
 
-struct PositionFullTerrainStatus;
-
 typedef std::unordered_map<Player*, UpdateData> UpdateDataMapType;
 
 static constexpr Milliseconds HEARTBEAT_INTERVAL = 5s + 200ms;

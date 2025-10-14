@@ -249,7 +249,7 @@ public:
     inline float getHeight(float x, float y) const { return (this->*_gridGetHeight)(x, y); }
     float getMinHeight(float x, float y) const;
     float getLiquidLevel(float x, float y) const;
-    LiquidData const GetLiquidData(float x, float y, float z, float collisionHeight, uint8 ReqLiquidType) const;
+    LiquidData const GetLiquidData(float x, float y, float z, float collisionHeight, Optional<uint8> ReqLiquidType) const;
 };
 
 #endif
